@@ -1,0 +1,1 @@
+<!-- If you do not want any post system, don't bother with the index. It's not the main file of this theme -->
