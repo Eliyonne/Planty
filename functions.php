@@ -5,7 +5,7 @@ $header_default = array(
 );
 
 
-function bare_initialize(){
+function bare_initialize(){ //bare support
     //Bare minimum support add or delete
     add_theme_support('wp-block-styles');
     add_theme_support('align-wide');
@@ -42,11 +42,26 @@ function elementor_support( $elementor_theme_manager ) { //elementor location su
     $elementor_theme_manager->register_location( 'page' );
 };
 
+function bare_menu_init() {
+    register_nav_menu('header-menu', 'Header Menu');
+
+};
+
+function add_admin_button( $items) { //add the admin link to the menu if you're connected on the admin part
+    if (is_user_logged_in()) {
+        $items .= '<li class="menu-item"><a href="/wp-admin">Admin</a></li>';
+    }
+    return $items;
+};
+
+
 //Bare initializer
 add_action( 'after_setup_theme', 'bare_initialize' );
 add_action( 'after_setup_theme', 'bare_logo_custom' );
 add_action( 'wp_enqueue_scripts', 'bare_style' );
 add_action( 'elementor/theme/register_locations','elementor_support'); //add elementor support for pages only
 add_action( 'admin_menu', 'menu_remove' ); //disable post, comments and tools menu in admin menu
+add_action( 'init','bare_menu_init'); //register function for header menu
+add_filter( 'wp_nav_menu_items', 'add_admin_button');
 
 ?>
