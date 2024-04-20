@@ -15,7 +15,11 @@
                 the_custom_logo();
             }    
         ?>
-        <?php bloginfo( 'name' ); ?>
-        <?php wp_nav_menu( array ('theme_location' => 'header-menu')); ?>
+        <?php wp_nav_menu( array (
+            'theme_location' => 'header-menu',
+            'menu_class'=> 'main_menu_custom',
+            'menu_id'=> 'Main_menu',
+            'container_class'=> 'main_menu_container',
+        )); ?>
     </div>
     </header>

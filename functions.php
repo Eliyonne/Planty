@@ -12,7 +12,7 @@ function bare_initialize(){ //bare support
     add_theme_support('dark-editor-style');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    // add_theme_support( 'custom-header', $header_default );
+   
     
 
 };
@@ -29,6 +29,16 @@ function bare_logo_custom() { //Custom logo setting, can be deactivate if you ha
         'width'=> 220,
     ); 
     add_theme_support( 'custom-logo', $default_logo );
+};
+
+function bare_header_custom() {
+    $default_header_custom = array(
+        'width'=> '1100',
+        'height'=> '240',
+        'flex-width'=> 'false',
+        'flex_height'=> 'true',
+    );
+    add_theme_support('custom-header', $default_header_custom );
 };
 
 function menu_remove() { // Delete or comment to repop the admin menu
@@ -58,6 +68,7 @@ function add_admin_button( $items) { //add the admin link to the menu if you're 
 //Bare initializer
 add_action( 'after_setup_theme', 'bare_initialize' );
 add_action( 'after_setup_theme', 'bare_logo_custom' );
+add_action( 'after_setup_theme', 'bare_header_custom');
 add_action( 'wp_enqueue_scripts', 'bare_style' );
 add_action( 'elementor/theme/register_locations','elementor_support'); //add elementor support for pages only
 add_action( 'admin_menu', 'menu_remove' ); //disable post, comments and tools menu in admin menu
