@@ -1,14 +1,281 @@
-/**
- * Theme Name: Bare pages
- * Version: 0.1
- */
-
- /* Change whatever you want for your style */
-* {
+/*general*/
+ * {
     margin: 0px;
     padding: 0px;
-    font-size: 24px; 
-    color: blue; 
- };
+    font-size: 14px;
+    font-family: 'Syne' !important;
+    line-height: 120%;
+ }
+
+ .main_contain{
+      width: 100%;
+      
+ }
+
+ .container{
+  max-width: 980px;
+ }
+
+ .main-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 0px 0px 20px;
+    align-items: center;
+ }
+
+ #Main_menu{
+    display: flex;
+    flex-direction: row;
+ }
+
+ #Main_menu li, #Main_menu li a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 16px;
+    color: black;
+    padding: 20px 20px;
+ }
+
+ #Main_menu li a:hover{
+   font-size: 13px;
+   font-weight: bolder;
+ }
+
+ #menu-item-54{
+   background-color: #DC9F96;
+   color: white;
+ }
+ #menu-item-54:hover{
+   background-color: #C02E44;
+ }
+
+ #menu-item-54 a:hover{
+   font-size: 16px !important;
+   font-weight:normal !important;
+ }
+
+ #menu-item-54 a {
+   color: white !important;
+ }
+
+ /*page specifique*/
+ /*page principale*/
+ .header-hero{
+   padding-top: 20px;
+   width: 60%;
+   margin: auto;
+ }
+
+
+
+/*page contact*/
+
+.flower-image{
+  bottom: 0px !important;
+  left: calc(10% + 20px) !important;
+}
+
+.contact-form{
+  font-family: 'syne';
+  
+}
+
+.contact-form input, .contact-form textarea{
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin: 10px 0px;
+  border: none !important;
+}
+
+.contact-form-image{
+  top: 58% !important;
+  left: calc(30% + 20px) !important;
+}
+
+.plante-image{
+  bottom: 0px !important;
+  right: calc(5% - 10px) !important;
+}
+
+/*page commander*/
+
+
+.quantities {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: calc((15vw - 1.2%));
+  
+}
+
+.quantite{
+  width: 30px !important;
+  padding: 2px 5px !important;
+  
+
+}
+
+.form-commander{
+  color: white !important;
+  font-family: 'Syne' !important;
+  padding-left: 70px !important;
+}
+
+
+.form-command input  {
+  width: 250px !important;
+  border-radius: 4px !important;
+  padding: 4px !important;
+  margin: 10px 0px;
+ 
+}
+
+.form-command-livraison{
+  padding-left: 30px !important;
+}
+
+.form-command-info{
+  border-right: solid 1px white !important;
+}
+
+ footer{
+   padding: 20px 0px;
+ }
+
+.text_footer{
+   text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+    /*page contact*/
+    .flower-image{
+      bottom: 0px !important;
+      left: calc(5% + 20px) !important;
+    }
+
+    .contact-form-image{
+      top: calc(58% -10px) !important;
+      left: calc(25% + 10px) !important;
+    }
+
+    .plante-image{
+      bottom: 0px !important;
+      right: calc(2% - 10px) !important;
+    }
+  
+    /*page commander*/
+
+    .form-commander{
+      padding-left: 30px !important;
+    }
+    .form-commander h2{
+      font-size: 18px !important;
+    }
+
+    .form-command input{
+      width: 200px !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+  /*page contact*/
+
+.flower-image{
+  display: none;
+    }
+  
+    .contact-form-image{
+      display: none;
+    }
+  
+    .plante-image{
+      display: none;
+    }
+
+  }
+
+  /*page commande*/
+
+  .form-commander{
+    padding-left: 0px ;  
+  }
+
+  .form-command-info{
+    border-right: solid 1px white ;
+    /* margin-right: 30px !important; */
+    padding-right: 50px ;
+    padding-left: 20px ;
+    border-right: none ; /*Ne fonctionne pas pourquoi? avec !important remplace l'instruction 
+    principale même au dessu de son breakpoint?? */
+    
+  }
+
+
+@media screen and (max-width: 760px) {
+  .main-header-container{
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 0px 0px 0px 0px 
+  }
+
+  #Main_menu{
+    width: 100%;
+    justify-content: space-between;
+    
+ }
+
+  .custom-logo{
+    align-self: center;
+    padding: 5px 0px 10px 0px;
+  }
+
+  #Main_menu li, #Main_menu li a{
+    padding: 5px 8px;
+    justify-content: space-around;
+    font-size: 14px;
+    
+  }
+
+  #Main_menu li a:hover{
+    font-size: 14px;
+    font-weight: normal;
+    color: #C02E44;
+  }
+  
+  #menu-item-54 a:hover{
+    font-size: 14px !important;
+    font-weight:normal !important;
+  }
+
+  /*page principale*/
+
+  .hero-title{
+    font-size: 22px;
+  }
+
+  /*page contact*/
+
+
+  /*page commander*/
+.form-commander{
+  padding-left: 30px ;
+}
+  
+  .form-command-info{
+    border-right: none;
+  }
+
+  .form-command-livraison{
+    padding-left: 0px !important;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .hero-title{
+    font-size: 18px;
+  }
+}
 
  

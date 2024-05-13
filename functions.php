@@ -1,9 +1,4 @@
 <?php
-$header_default = array(
-    'flex-width'=> false,
-    'height' => 80,
-);
-
 
 function bare_initialize(){ //bare support
     //Bare minimum support add or delete
@@ -19,8 +14,10 @@ function bare_initialize(){ //bare support
 
 function bare_style() {
     //Bare minimal style support for your css
-    wp_register_style( 'bare-theme', get_template_directory_uri() . '/style.css' );
+    wp_register_style('Syne-police', 'https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+    wp_register_style( 'bare-theme', get_template_directory_uri() . '/style.css', $deps = array(), $ver = '0.1');
     wp_enqueue_style( 'bare-theme');
+    wp_enqueue_style( 'Syne-police' );
 };
 
 function bare_logo_custom() { //Custom logo setting, can be deactivate if you hardcode your header
@@ -64,6 +61,11 @@ function add_admin_button( $items) { //add the admin link to the menu if you're 
     return $items;
 };
 
+function myfunc() {
+    // $menuitems = wp_get_nav_menu_items($menu->"Main_menu", array( 'order' => 'ASC' ));
+    var_dump( $menuitems );
+    die;
+};
 
 //Bare initializer
 add_action( 'after_setup_theme', 'bare_initialize' );
@@ -74,5 +76,6 @@ add_action( 'elementor/theme/register_locations','elementor_support'); //add ele
 add_action( 'admin_menu', 'menu_remove' ); //disable post, comments and tools menu in admin menu
 add_action( 'init','bare_menu_init'); //register function for header menu
 add_filter( 'wp_nav_menu_items', 'add_admin_button');
+// add_filter( 'wp_nav_menu_items', 'myfunc');
 
 ?>

@@ -19,7 +19,7 @@
             'theme_location' => 'header-menu',
             'menu_class'=> 'main_menu_custom',
             'menu_id'=> 'Main_menu',
-            'container_class'=> 'main_menu_container',
+            'container'=> 'ul',
         )); ?>
     </div>
     </header>
