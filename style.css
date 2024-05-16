@@ -101,6 +101,20 @@
   left: calc(30% + 20px) !important;
 }
 
+
+.form-button{
+  margin-left: 33% !important;
+  width: 33%;
+  background-color: #E0B9B4;
+  padding: 10px 5px;
+  font-size: 15px;
+  font-family: 'Syne';
+  font-weight: 400;
+  line-height: 36px;
+  border-radius: 5px;
+  color: white;
+}
+
 .plante-image{
   bottom: 0px !important;
   right: calc(5% - 10px) !important;
@@ -146,12 +160,114 @@
   border-right: solid 1px white !important;
 }
 
+
+
+.formcommande{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 10%;
+  /* justify-content:space-between; */
+  position: relative;
+  font-family: 'Syne' !important;
+  /* justify-content: center; */
+}
+
+.informations{
+  margin-right: 0%;
+}
+
+.livraison{
+  margin-left: 5%;
+}
+
+.descript{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.element{
+  margin-top: 10px;
+}
+
+ .element input{
+  /* width: calc(200px + 25%) !important; */
+  min-width: 100px;
+  border-radius: 7px !important;
+  padding: 8px !important;
+  margin: 12px 0px;
+}
+
+.informations input{
+  width: calc(200px + 15%) ;
+}
+
+.livraison input{
+  width: calc(200px + 25%) ;
+}
+
+.element label{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+
+}
+
+.divider-vertical{
+  border: 0.5px solid white;
+  margin-left: 0px;
+}
+
+.form-button-commander{
+  position: relative;
+  margin-left: 40%;
+  width: 20%;
+  background-color: #E0B9B4;
+  padding: 5px 5px;
+  font-size: 15px;
+  font-family: 'Syne';
+  font-weight: 400;
+  line-height: 36px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  
+}
+
  footer{
    padding: 20px 0px;
  }
 
 .text_footer{
    text-align: center;
+}
+
+@media screen and (max-width:1200px) {
+
+  
+
+  .form-container{
+    width: 60%;
+  }
+
+  .form-commande{
+    justify-content: center;
+  }
+
+  .formcommande .descript{
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .informations{
+    margin-right: 2%;
+  }
+
+  .livraison{
+    margin-left: 5%;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -172,17 +288,37 @@
     }
   
     /*page commander*/
+    
+   .descript{
+    font-size: 20px !important;
+    line-height: 22px !important;
+  }
+  .form-section p{
+    font-size: 12px;
+    line-height: 14px;
+  }
 
-    .form-commander{
-      padding-left: 30px !important;
-    }
-    .form-commander h2{
-      font-size: 18px !important;
-    }
+  .informations{
+    margin-right: 0%;
+  }
 
-    .form-command input{
-      width: 200px !important;
-    }
+  .informations input{
+    width: calc(200px + 5%) ;
+  }
+
+  .livraison{
+    margin-left: 2%;
+  }
+
+  .livraison input{
+    width: calc(200px + 5%);
+  }
+
+  .form-button-commander{
+    width: 30%;
+    margin-left: 35%;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -218,6 +354,52 @@
     principale même au dessu de son breakpoint?? */
     
   }
+
+  /* testing purpose */
+  /*change ici pour rétablir le titre */
+  /* .descript{
+    font-size: 22px; 
+  } */
+
+
+  .livraison{
+    /* margin-left: 2%; */
+  }
+
+  .livraison input{
+    /* width: calc(200px + 10%); */
+  }
+
+
+  @media screen and (max-width: 860px){
+    .formcommande{
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .form-container{
+      display: flex !important;
+      justify-content: center !important;
+    }
+  
+    .formcommande input{
+      width: calc(200px + 25%);
+    }
+  
+    .divider-vertical{
+      display: none;
+    }
+  
+    .livraison{
+      margin-left: 0px;
+    }
+  
+    .form-button-commander{
+      width: 50%;
+      margin-left: 0px;
+    }
+  }
+    
 
 
 @media screen and (max-width: 760px) {
@@ -266,9 +448,12 @@
 
 
   /*page commander*/
-.form-commander{
+
+
+  .form-commander{
   padding-left: 30px ;
-}
+  
+  }
   
   .form-command-info{
     border-right: none;
@@ -278,12 +463,68 @@
     padding-left: 0px !important;
   }
 
+  /*testing*/
+  .formcommande{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-container{
+    display: flex ;
+    justify-content: center ;
+  }
+
+  .formcommande input{
+    width: calc(200px + 15%) ;
+  }
+
+  .divider-vertical{
+    display: none;
+  }
+
+  .livraison{
+    margin-left: 0px;
+  }
+
+  .form-button-commander{
+    width: 50%;
+    margin-left: 0px;
+  }
+
 }
 
 @media screen and (max-width: 420px) {
+
+  /*Page d'accueil*/
   .hero-title{
     font-size: 18px;
   }
+
+  /*page commander*/
+  .commander-title h2{
+    font-size: 24px !important;
+    line-height: 26px !important;
+  }
+
+  .descript{
+    font-size: 16px !important;
+    line-height: 18px !important;
+  }
+
+  .form-section label{
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .formcommande input{
+    width: calc(200px + 10%) !important;
+  }
+
+  .form-button-commander{
+    width: 70%;
+    margin-left: 0px;
+  }
+
 }
 
  
