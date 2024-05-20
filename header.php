@@ -15,11 +15,20 @@
                 the_custom_logo();
             }    
         ?>
-        <?php wp_nav_menu( array (
-            'theme_location' => 'header-menu',
-            'menu_class'=> 'main_menu_custom',
-            'menu_id'=> 'Main_menu',
-            'container'=> 'ul',
-        )); ?>
+        <div id="menu-container">
+            <?php wp_nav_menu( array (
+                'menu' => 'Main-menu',
+                'theme_location' => 'header-menu',
+                'menu_class'=> 'main_menu_custom',
+                'menu_id'=> 'Main_menu',
+                'container'=> 'ul',
+            )); ?>
+            <?php wp_nav_menu( array (
+                'theme_location' => 'header-extra',
+                'menu_class'=> 'main_menu_custom2',
+                'menu_id'=> 'Main_menu',
+                'container'=> 'ul',
+            )); ?>
+        </div>
     </div>
     </header>

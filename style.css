@@ -32,9 +32,19 @@
     align-items: center;
  }
 
+ #menu-container{
+  display: flex;
+  flex-direction: row;
+ }
+
  #Main_menu{
     display: flex;
     flex-direction: row;
+    
+ }
+
+ .main_menu_custom2{
+  margin-left: 15px;
  }
 
  #Main_menu li, #Main_menu li a{
@@ -42,7 +52,7 @@
     list-style: none;
     font-size: 16px;
     color: black;
-    padding: 20px 20px;
+    padding: 20px 10px;
  }
 
  #Main_menu li a:hover{
